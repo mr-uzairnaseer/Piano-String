@@ -144,7 +144,7 @@ let compressor = null;
 
 function getAudioContext() {
    if (!audioCtx) {
-      audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
       // Add compressor to prevent clipping and reduce pops
       compressor = audioCtx.createDynamicsCompressor();
       compressor.threshold.value = -24;
